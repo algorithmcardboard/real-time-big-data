@@ -1,0 +1,121 @@
+Script started on Wed 16 Sep 2015 07:22:41 PM PDT
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[?1034h[cloudera@quickstart assignment2]$ ls -l src
+total 12
+-rw-rw-r-- 1 cloudera cloudera 1139 Sep 16 19:02 WordCount.java
+-rw-rw-r-- 1 cloudera cloudera  854 Sep 16 19:03 WordCountMapper.java
+-rw-rw-r-- 1 cloudera cloudera  543 Sep 16 19:03 WordCountReducer.java
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ [K[cloudera@quickstart assignment2]$ 
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ git [K[K[K[Kls -l
+total 12
+drwxrwxr-x 2 cloudera cloudera 4096 Sep 16 19:04 [0m[01;34mbuild[0m
+drwxrwxr-x 2 cloudera cloudera 4096 Sep 16 19:10 [01;34minput[0m
+drwxrwxr-x 2 cloudera cloudera 4096 Sep 16 19:03 [01;34msrc[0m
+-rw-rw-r-- 1 cloudera cloudera    0 Sep 16 19:22 typescript
+[m]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ a[Kcd src
+]0;cloudera@quickstart:~/workspace/real-time/assignment2/src[cloudera@quickstart src]$ ls
+WordCount.java  WordCountMapper.java  WordCountReducer.java
+]0;cloudera@quickstart:~/workspace/real-time/assignment2/src[cloudera@quickstart src]$ [5P(reverse-i-search)`':[Cj': git remote add origin https://github.com/rajegannathan/real-time-big-data.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Pa': git config --global user.name "Anirudhan J Rajagopalan"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[27Pv': mv MaxTemperature*java src/[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[cloudera@quickstart src]$[C
+]0;cloudera@quickstart:~/workspace/real-time/assignment2/src[cloudera@quickstart src]$ cd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ [13P(reverse-i-search)`':[Cm': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[48Pv': mv mapreduce_output1.script 1901_1902.log[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [C[C[C[9Ps': mv sa MaxTemperatureMapper.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9@[cloudera@quickstart assignment2]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd[K[Kcd [K[K[Kmv src[K[K[K[K[K[Kmv src/*.class [K ./build
+mv: overwrite `./build/WordCount.class'? y
+mv: overwrite `./build/WordCountMapper.class'? y
+mv: overwrite `./build/WordCountReducer.class'? y
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ ls[K[Kls buil[K[K[K[K[K[K[Kcd[K[Kcd build
+]0;cloudera@quickstart:~/workspace/real-time/assignment2/build[cloudera@quickstart build]$ [7P(reverse-i-search)`':[Cj': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr': mv ajr619-hw1.jar build/[Kexport HADOOP_CLASSPATH=ajr619-hw1.jar [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pjar -cf ajr619-hw1.jar *.class[4@[cloudera@quickstart build]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@2
+]0;cloudera@quickstart:~/workspace/real-time/assignment2/build[cloudera@quickstart build]$ cd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ cp [K[K[Kmv build/ajr619-hw2.jar .
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ [13P(reverse-i-search)`':[Ce': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx': exit[Kp': export HADOOP_CLASSPATH=ajr619-hw1.jar [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@o[C[C[C[1@r[C[C[C[1@t[C[C[C[7@[cloudera@quickstart assignment2]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@2
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ [K[cloudera@quickstart assignment2]$ hdf[K[K[K[13P(reverse-i-search)`':[C[40@h': export HADOOP_CLASSPATH=ajr619-hw2.jar[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ': hdfs dfs -ls /[K[1@d[C[C[C[1@f[C[C[C[1@s[C[C[C[1@ [C[C[C[1@-[C[C[Cp': hdfs dfs -put input[1@u[C[C[C[1@t[C[C[C[cloudera@quickstart assignment2]$[C
+
+put: `input/in': File exists
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ 
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ hdfs dfs -rm -r input
+15/09/16 19:35:02 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ hdfs dfs -put input
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ hdfs WordCount input output
+15/09/16 19:39:02 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+15/09/16 19:39:06 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+15/09/16 19:39:07 INFO input.FileInputFormat: Total input paths to process : 1
+15/09/16 19:39:08 INFO mapreduce.JobSubmitter: number of splits:1
+15/09/16 19:39:10 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1442453624652_0002
+15/09/16 19:39:11 INFO impl.YarnClientImpl: Submitted application application_1442453624652_0002
+15/09/16 19:39:11 INFO mapreduce.Job: The url to track the job: http://quickstart.cloudera:8088/proxy/application_1442453624652_0002/
+15/09/16 19:39:11 INFO mapreduce.Job: Running job: job_1442453624652_0002
+15/09/16 19:39:47 INFO mapreduce.Job: Job job_1442453624652_0002 running in uber mode : false
+15/09/16 19:39:47 INFO mapreduce.Job:  map 0% reduce 0%
+15/09/16 19:40:13 INFO mapreduce.Job:  map 100% reduce 0%
+15/09/16 19:40:41 INFO mapreduce.Job:  map 100% reduce 100%
+15/09/16 19:40:42 INFO mapreduce.Job: Job job_1442453624652_0002 completed successfully
+15/09/16 19:40:43 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=57
+		FILE: Number of bytes written=220975
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=408
+		HDFS: Number of bytes written=35
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=23045
+		Total time spent by all reduces in occupied slots (ms)=24830
+		Total time spent by all map tasks (ms)=23045
+		Total time spent by all reduce tasks (ms)=24830
+		Total vcore-seconds taken by all map tasks=23045
+		Total vcore-seconds taken by all reduce tasks=24830
+		Total megabyte-seconds taken by all map tasks=23598080
+		Total megabyte-seconds taken by all reduce tasks=25425920
+	Map-Reduce Framework
+		Map input records=3
+		Map output records=12
+		Map output bytes=129
+		Map output materialized bytes=57
+		Input split bytes=119
+		Combine input records=12
+		Combine output records=4
+		Reduce input groups=4
+		Reduce shuffle bytes=57
+		Reduce input records=4
+		Reduce output records=4
+		Spilled Records=8
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=511
+		CPU time spent (ms)=4970
+		Physical memory (bytes) snapshot=345751552
+		Virtual memory (bytes) snapshot=3007365120
+		Total committed heap usage (bytes)=226562048
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=289
+	File Output Format Counters 
+		Bytes Written=35
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ hdfs dfs -get output
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ ls output/
+part-r-00000  _SUCCESS
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ cat [K[K[K[Kls -lh output
+total 4.0K
+-rw-r--r-- 1 cloudera cloudera 35 Sep 16 19:41 part-r-00000
+-rw-r--r-- 1 cloudera cloudera  0 Sep 16 19:41 _SUCCESS
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ cat output/part-r-00000 
+chicago	1
+dec	2
+hackathon	2
+java	0
+]0;cloudera@quickstart:~/workspace/real-time/assignment2[cloudera@quickstart assignment2]$ exit
+exit
+
+Script done on Wed 16 Sep 2015 07:42:20 PM PDT
