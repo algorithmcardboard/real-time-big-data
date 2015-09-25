@@ -1,0 +1,62 @@
+Script started on Thu 24 Sep 2015 08:45:33 PM PDT
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[?1034h[cloudera@quickstart assignment3]$ ls
+[0m[01;34mbuild[0m  [01;34minput[0m  [01;34mlog[0m  [01;34msrc[0m  typescript
+[m]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ date
+Thu Sep 24 20:45:38 PDT 2015
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls src/
+PageRankIterative.java  PageRank.java  PRSumReducer.java  TokenizerMapper.java
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls build/
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls log/
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls s[Kinput/
+in
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cat input/in 
+A C F 0.166667
+B D E F 0.166667
+C A B 0.166667
+D A B C E F 0.166667
+E F 0.166667
+F B C 0.166667
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cat src/*.java[K[K[Kcat src/*.java^C
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd src/
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/src[cloudera@quickstart src]$ [5P(reverse-i-search)`':[C[19@j': rm ajr619-hw3.jar[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@c[C[C[C[cloudera@quickstart src]$[C
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/src[cloudera@quickstart src]$ cd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ [13P(reverse-i-search)`':[Cm': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv': mv ajr619-hw2.jar build/[K[1@ [C[C[C[2Ps': mv src/*.class[1@r[C[C[C[1@c[C[C[C[7@[cloudera@quickstart assignment3]$[C
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd build/[K[Kls src/
+PageRankIterative.java  PageRank.java  PRSumReducer.java  TokenizerMapper.java
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls build/
+PageRank.class  PageRankIterative.class  PRSumReducer.class  TokenizerMapper.class
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd build/
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/build[cloudera@quickstart build]$ [7P(reverse-i-search)`':[Cj': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr': rm ajr619-hw3.jar [K[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv ajr619-hw2.jar build/[6Prm ajr619-hw2.jar [21@export HADOOP_CLASSPATH=[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pmv build/ajr619-hw2.jar .jar -cf ajr619-hw2.jar *.class[3@[cloudera@quickstart build]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@3
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/build[cloudera@quickstart build]$ cd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cp build/ajr619-hw3.jar .
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ [13P(reverse-i-search)`':[Ce': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx': exit[Kp': export HADOOP_CLASSPATH=ajr619-hw2.jar [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@o[C[C[C[1@r[C[C[C[1@t[C[C[C[7@[cloudera@quickstart assignment3]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@3
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -ls 
+Found 6 items
+-rw-r--r--   1 cloudera cloudera     888190 2015-09-11 13:46 1901
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:29 input
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:31 output
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:35 outputIterative0
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:36 outputIterative1
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:38 outputIterative2
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -rm -rf[K output; [K[K outp[K[K[K[KoutputIterative0[K*
+15/09/24 20:47:52 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+15/09/24 20:47:53 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted outputIterative0
+15/09/24 20:47:53 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted outputIterative1
+15/09/24 20:47:53 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted outputIterative2
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -rm -r output outputIterative*^C
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -[K[K[K[K[K[K dfs-[K -put input
+put: `input/in': File exists
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -rm -r input
+15/09/24 20:48:46 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -rm -r input[2Pput[C[C[C[C[C[Crm -r output outputIterative*put input[K
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs [K[K[K[K[K[K[K[K[Khdfs PageRank input outputSingle
+15/09/24 20:49:38 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+15/09/24 20:49:41 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+15/09/24 20:49:43 INFO input.FileInputFormat: Total input paths to process : 1
+15/09/24 20:49:43 INFO mapreduce.JobSubmitter: number of splits:1
+15/09/24 20:49:44 INFO
