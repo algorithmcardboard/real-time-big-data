@@ -1,0 +1,411 @@
+Script started on Thu 24 Sep 2015 08:45:33 PM PDT
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[?1034h[cloudera@quickstart assignment3]$ ls
+[0m[01;34mbuild[0m  [01;34minput[0m  [01;34mlog[0m  [01;34msrc[0m  typescript
+[m]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ date
+Thu Sep 24 20:45:38 PDT 2015
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls src/
+PageRankIterative.java  PageRank.java  PRSumReducer.java  TokenizerMapper.java
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls build/
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls log/
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls s[Kinput/
+in
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cat input/in 
+A C F 0.166667
+B D E F 0.166667
+C A B 0.166667
+D A B C E F 0.166667
+E F 0.166667
+F B C 0.166667
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cat src/*.java[K[K[Kcat src/*.java^C
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd src/
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/src[cloudera@quickstart src]$ [5P(reverse-i-search)`':[C[19@j': rm ajr619-hw3.jar[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@c[C[C[C[cloudera@quickstart src]$[C
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/src[cloudera@quickstart src]$ cd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ [13P(reverse-i-search)`':[Cm': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv': mv ajr619-hw2.jar build/[K[1@ [C[C[C[2Ps': mv src/*.class[1@r[C[C[C[1@c[C[C[C[7@[cloudera@quickstart assignment3]$[C
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd build/[K[Kls src/
+PageRankIterative.java  PageRank.java  PRSumReducer.java  TokenizerMapper.java
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls build/
+PageRank.class  PageRankIterative.class  PRSumReducer.class  TokenizerMapper.class
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd build/
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/build[cloudera@quickstart build]$ [7P(reverse-i-search)`':[Cj': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr': rm ajr619-hw3.jar [K[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv ajr619-hw2.jar build/[6Prm ajr619-hw2.jar [21@export HADOOP_CLASSPATH=[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pmv build/ajr619-hw2.jar .jar -cf ajr619-hw2.jar *.class[3@[cloudera@quickstart build]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@3
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/build[cloudera@quickstart build]$ cd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cp build/ajr619-hw3.jar .
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ [13P(reverse-i-search)`':[Ce': javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-0.20-mapreduce/*:/usr/lib/hadoop-hdfs/* *.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx': exit[Kp': export HADOOP_CLASSPATH=ajr619-hw2.jar [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@o[C[C[C[1@r[C[C[C[1@t[C[C[C[7@[cloudera@quickstart assignment3]$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@3
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -ls 
+Found 6 items
+-rw-r--r--   1 cloudera cloudera     888190 2015-09-11 13:46 1901
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:29 input
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:31 output
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:35 outputIterative0
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:36 outputIterative1
+drwxr-xr-x   - cloudera cloudera          0 2015-09-24 20:38 outputIterative2
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -rm -rf[K output; [K[K outp[K[K[K[KoutputIterative0[K*
+15/09/24 20:47:52 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted output
+15/09/24 20:47:53 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted outputIterative0
+15/09/24 20:47:53 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted outputIterative1
+15/09/24 20:47:53 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted outputIterative2
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -rm -r output outputIterative*^C
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -[K[K[K[K[K[K dfs-[K -put input
+put: `input/in': File exists
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -rm -r input
+15/09/24 20:48:46 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted input
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -rm -r input[2Pput[C[C[C[C[C[Crm -r output outputIterative*put input[K
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs [K[K[K[K[K[K[K[K[Khdfs PageRank input outputSingle
+15/09/24 20:49:38 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+15/09/24 20:49:41 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+15/09/24 20:49:43 INFO input.FileInputFormat: Total input paths to process : 1
+15/09/24 20:49:43 INFO mapreduce.JobSubmitter: number of splits:1
+15/09/24 20:49:44 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1443148119527_0005
+15/09/24 20:49:45 INFO impl.YarnClientImpl: Submitted application application_1443148119527_0005
+15/09/24 20:49:46 INFO mapreduce.Job: The url to track the job: http://quickstart.cloudera:8088/proxy/application_1443148119527_0005/
+15/09/24 20:49:46 INFO mapreduce.Job: Running job: job_1443148119527_0005
+15/09/24 20:50:18 INFO mapreduce.Job: Job job_1443148119527_0005 running in uber mode : false
+15/09/24 20:50:18 INFO mapreduce.Job:  map 0% reduce 0%
+15/09/24 20:50:43 INFO mapreduce.Job:  map 100% reduce 0%
+15/09/24 20:51:09 INFO mapreduce.Job:  map 100% reduce 100%
+15/09/24 20:51:10 INFO mapreduce.Job: Job job_1443148119527_0005 completed successfully
+15/09/24 20:51:11 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=157
+		FILE: Number of bytes written=220869
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=215
+		HDFS: Number of bytes written=145
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=21194
+		Total time spent by all reduces in occupied slots (ms)=21907
+		Total time spent by all map tasks (ms)=21194
+		Total time spent by all reduce tasks (ms)=21907
+		Total vcore-seconds taken by all map tasks=21194
+		Total vcore-seconds taken by all reduce tasks=21907
+		Total megabyte-seconds taken by all map tasks=21702656
+		Total megabyte-seconds taken by all reduce tasks=22432768
+	Map-Reduce Framework
+		Map input records=6
+		Map output records=21
+		Map output bytes=287
+		Map output materialized bytes=157
+		Input split bytes=119
+		Combine input records=21
+		Combine output records=6
+		Reduce input groups=6
+		Reduce shuffle bytes=157
+		Reduce input records=6
+		Reduce output records=6
+		Spilled Records=12
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=460
+		CPU time spent (ms)=4470
+		Physical memory (bytes) snapshot=346386432
+		Virtual memory (bytes) snapshot=3007508480
+		Total committed heap usage (bytes)=226562048
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=96
+	File Output Format Counters 
+		Bytes Written=145
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs PageRankIterative input outputIterative
+15/09/24 20:51:29 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+15/09/24 20:51:33 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+15/09/24 20:51:34 INFO input.FileInputFormat: Total input paths to process : 1
+15/09/24 20:51:34 INFO mapreduce.JobSubmitter: number of splits:1
+15/09/24 20:51:35 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1443148119527_0006
+15/09/24 20:51:37 INFO impl.YarnClientImpl: Submitted application application_1443148119527_0006
+15/09/24 20:51:37 INFO mapreduce.Job: The url to track the job: http://quickstart.cloudera:8088/proxy/application_1443148119527_0006/
+15/09/24 20:51:37 INFO mapreduce.Job: Running job: job_1443148119527_0006
+15/09/24 20:52:09 INFO mapreduce.Job: Job job_1443148119527_0006 running in uber mode : false
+15/09/24 20:52:09 INFO mapreduce.Job:  map 0% reduce 0%
+15/09/24 20:52:56 INFO mapreduce.Job:  map 100% reduce 0%
+15/09/24 20:53:27 INFO mapreduce.Job:  map 100% reduce 100%
+15/09/24 20:53:28 INFO mapreduce.Job: Job job_1443148119527_0006 completed successfully
+15/09/24 20:53:28 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=157
+		FILE: Number of bytes written=220877
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=215
+		HDFS: Number of bytes written=145
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=43694
+		Total time spent by all reduces in occupied slots (ms)=27120
+		Total time spent by all map tasks (ms)=43694
+		Total time spent by all reduce tasks (ms)=27120
+		Total vcore-seconds taken by all map tasks=43694
+		Total vcore-seconds taken by all reduce tasks=27120
+		Total megabyte-seconds taken by all map tasks=44742656
+		Total megabyte-seconds taken by all reduce tasks=27770880
+	Map-Reduce Framework
+		Map input records=6
+		Map output records=21
+		Map output bytes=287
+		Map output materialized bytes=157
+		Input split bytes=119
+		Combine input records=21
+		Combine output records=6
+		Reduce input groups=6
+		Reduce shuffle bytes=157
+		Reduce input records=6
+		Reduce output records=6
+		Spilled Records=12
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=1048
+		CPU time spent (ms)=5910
+		Physical memory (bytes) snapshot=346030080
+		Virtual memory (bytes) snapshot=3007365120
+		Total committed heap usage (bytes)=226562048
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=96
+	File Output Format Counters 
+		Bytes Written=145
+15/09/24 20:53:29 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+15/09/24 20:53:29 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+15/09/24 20:53:29 INFO input.FileInputFormat: Total input paths to process : 1
+15/09/24 20:53:29 INFO mapreduce.JobSubmitter: number of splits:1
+15/09/24 20:53:30 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1443148119527_0007
+15/09/24 20:53:30 INFO impl.YarnClientImpl: Submitted application application_1443148119527_0007
+15/09/24 20:53:30 INFO mapreduce.Job: The url to track the job: http://quickstart.cloudera:8088/proxy/application_1443148119527_0007/
+15/09/24 20:53:30 INFO mapreduce.Job: Running job: job_1443148119527_0007
+15/09/24 20:54:08 INFO mapreduce.Job: Job job_1443148119527_0007 running in uber mode : false
+15/09/24 20:54:08 INFO mapreduce.Job:  map 0% reduce 0%
+15/09/24 20:54:45 INFO mapreduce.Job:  map 100% reduce 0%
+15/09/24 20:55:21 INFO mapreduce.Job:  map 100% reduce 100%
+15/09/24 20:55:22 INFO mapreduce.Job: Job job_1443148119527_0007 completed successfully
+15/09/24 20:55:22 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=154
+		FILE: Number of bytes written=220893
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=285
+		HDFS: Number of bytes written=142
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=31822
+		Total time spent by all reduces in occupied slots (ms)=31619
+		Total time spent by all map tasks (ms)=31822
+		Total time spent by all reduce tasks (ms)=31619
+		Total vcore-seconds taken by all map tasks=31822
+		Total vcore-seconds taken by all reduce tasks=31619
+		Total megabyte-seconds taken by all map tasks=32585728
+		Total megabyte-seconds taken by all reduce tasks=32377856
+	Map-Reduce Framework
+		Map input records=6
+		Map output records=21
+		Map output bytes=321
+		Map output materialized bytes=154
+		Input split bytes=140
+		Combine input records=21
+		Combine output records=6
+		Reduce input groups=6
+		Reduce shuffle bytes=154
+		Reduce input records=6
+		Reduce output records=6
+		Spilled Records=12
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=822
+		CPU time spent (ms)=6440
+		Physical memory (bytes) snapshot=341864448
+		Virtual memory (bytes) snapshot=3008950272
+		Total committed heap usage (bytes)=226562048
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=145
+	File Output Format Counters 
+		Bytes Written=142
+15/09/24 20:55:22 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+15/09/24 20:55:22 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+15/09/24 20:55:22 INFO input.FileInputFormat: Total input paths to process : 1
+15/09/24 20:55:23 INFO mapreduce.JobSubmitter: number of splits:1
+15/09/24 20:55:23 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1443148119527_0008
+15/09/24 20:55:23 INFO impl.YarnClientImpl: Submitted application application_1443148119527_0008
+15/09/24 20:55:23 INFO mapreduce.Job: The url to track the job: http://quickstart.cloudera:8088/proxy/application_1443148119527_0008/
+15/09/24 20:55:23 INFO mapreduce.Job: Running job: job_1443148119527_0008
+15/09/24 20:56:06 INFO mapreduce.Job: Job job_1443148119527_0008 running in uber mode : false
+15/09/24 20:56:06 INFO mapreduce.Job:  map 0% reduce 0%
+15/09/24 20:56:36 INFO mapreduce.Job:  map 100% reduce 0%
+15/09/24 20:57:03 INFO mapreduce.Job:  map 100% reduce 100%
+15/09/24 20:57:04 INFO mapreduce.Job: Job job_1443148119527_0008 completed successfully
+15/09/24 20:57:04 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=167
+		FILE: Number of bytes written=220919
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=282
+		HDFS: Number of bytes written=155
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=26039
+		Total time spent by all reduces in occupied slots (ms)=23846
+		Total time spent by all map tasks (ms)=26039
+		Total time spent by all reduce tasks (ms)=23846
+		Total vcore-seconds taken by all map tasks=26039
+		Total vcore-seconds taken by all reduce tasks=23846
+		Total megabyte-seconds taken by all map tasks=26663936
+		Total megabyte-seconds taken by all reduce tasks=24418304
+	Map-Reduce Framework
+		Map input records=6
+		Map output records=21
+		Map output bytes=340
+		Map output materialized bytes=167
+		Input split bytes=140
+		Combine input records=21
+		Combine output records=6
+		Reduce input groups=6
+		Reduce shuffle bytes=167
+		Reduce input records=6
+		Reduce output records=6
+		Spilled Records=12
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=537
+		CPU time spent (ms)=4980
+		Physical memory (bytes) snapshot=348520448
+		Virtual memory (bytes) snapshot=3007365120
+		Total committed heap usage (bytes)=226562048
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=142
+	File Output Format Counters 
+		Bytes Written=155
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -get outputSingle outputIterative0 outputIterative1 outo[KputIterative2
+get: `outputIterative2': No such file or directory
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ hdfs dfs -get outputSingle outputIterative0 outputIterative1 outputIterative2[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K*
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls -l output[Kt*
+outputIterative0:
+total 4
+-rw-r--r-- 1 cloudera cloudera 145 Sep 24 20:58 part-r-00000
+-rw-r--r-- 1 cloudera cloudera   0 Sep 24 20:57 _SUCCESS
+
+outputIterative1:
+total 4
+-rw-r--r-- 1 cloudera cloudera 142 Sep 24 20:58 part-r-00000
+-rw-r--r-- 1 cloudera cloudera   0 Sep 24 20:58 _SUCCESS
+
+outputIterative2:
+total 4
+-rw-r--r-- 1 cloudera cloudera 155 Sep 24 20:58 part-r-00000
+-rw-r--r-- 1 cloudera cloudera   0 Sep 24 20:58 _SUCCESS
+
+outputSingle:
+total 4
+-rw-r--r-- 1 cloudera cloudera 145 Sep 24 20:58 part-r-00000
+-rw-r--r-- 1 cloudera cloudera   0 Sep 24 20:58 _SUCCESS
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ ls -l o[K[Krt
+total 64
+drwxrwxr-x 2 cloudera cloudera  4096 Sep 24 19:37 [0m[01;34mlog[0m
+drwxrwxr-x 2 cloudera cloudera  4096 Sep 24 20:24 [01;34minput[0m
+drwxrwxr-x 2 cloudera cloudera  4096 Sep 24 20:46 [01;34msrc[0m
+drwxrwxr-x 2 cloudera cloudera  4096 Sep 24 20:46 [01;34mbuild[0m
+-rw-rw-r-- 1 cloudera cloudera  4608 Sep 24 20:46 [01;31majr619-hw3.jar[0m
+-rw-rw-r-- 1 cloudera cloudera 20480 Sep 24 20:57 typescript
+drwxrwxr-x 2 cloudera cloudera  4096 Sep 24 20:58 [01;34moutputIterative0[0m
+drwxrwxr-x 2 cloudera cloudera  4096 Sep 24 20:58 [01;34moutputIterative1[0m
+drwxrwxr-x 2 cloudera cloudera  4096 Sep 24 20:58 [01;34moutputIterative2[0m
+drwxrwxr-x 2 cloudera cloudera  4096 Sep 24 20:58 [01;34moutputSingle[0m
+[m]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd outputSingle/
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/outputSingle[cloudera@quickstart outputSingle]$ cat[K[K[Kls
+part-r-00000  _SUCCESS
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/outputSingle[cloudera@quickstart outputSingle]$ cat *
+A	C F 0.116660
+B	D E F 0.2000004000000000
+C	A B 0.2000004000000000
+D	A B C E F 0.0555556666666660
+E	F 0.0888890666666660
+F	B C 0.338889566666660
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/outputSingle[cloudera@quickstart outputSingle]$ cc[Kd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd outputIterative0
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/outputIterative0[cloudera@quickstart outputIterative0]$ cat *
+A	C F 0.116660
+B	D E F 0.2000004000000000
+C	A B 0.2000004000000000
+D	A B C E F 0.0555556666666660
+E	F 0.0888890666666660
+F	B C 0.338889566666660
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/outputIterative0[cloudera@quickstart outputIterative0]$ cd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd outputIterative1
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/outputIterative1[cloudera@quickstart outputIterative1]$ cat *
+A	C F 0.111111333333330
+B	D E F 0.280556116666660
+C	A B 0.2388859166666630
+D	A B C E F 0.066660
+E	F 0.077777933333330
+F	B C 0.224996999999990
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/outputIterative1[cloudera@quickstart outputIterative1]$ cd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ cd outputit[K[KIterative2
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/outputIterative2[cloudera@quickstart outputIterative2]$ cat *
+A	C F 0.132774958333330
+B	D E F 0.2452734583333260
+C	A B 0.1813861666666600
+D	A B C E F 0.0935187055555530
+E	F 0.1068507055555530
+F	B C 0.2401843055555480
+]0;cloudera@quickstart:~/workspace/real-time/assignment3/outputIterative2[cloudera@quickstart outputIterative2]$ cd ..
+]0;cloudera@quickstart:~/workspace/real-time/assignment3[cloudera@quickstart assignment3]$ exit
+exit
+
+Script done on Thu 24 Sep 2015 08:58:46 PM PDT
